@@ -29,6 +29,7 @@ cancer_treated_2023.08.08/
 2. **Directories**: Modify `input_dir` and `output_dir` variables to designate your directories containing `.TIFF` images and the desired output location for `.JPEGs`, respectively.
 3. **Executor Selection**: Based on workload characteristics and system features, you can opt between `ThreadPoolExecutor` and `ProcessPoolExecutor`. The default executor in the provided code is set to threads. To switch, uncomment the relevant lines in the code.
 4. **Adjusting Workers**: Tweak the `max_workers` parameter based on system capacity and performance observations. A recommended starting point is the number of available CPU threads.
+5. **Adjust JPEG Quality**: You can change the JPEG quality. 95 is recommended, but you can go up to 100, why not?
 
 
 # Optimization and Multithreading
