@@ -37,14 +37,14 @@ cancer_treated_2023.08.08/
 This code performs image format conversion, changing `.TIFF` files to `.JPEG`, and is optimized for speed using several techniques:
 
 ### Image File Handling with `imageio`
-- We transitioned from PIL to the `imageio` library. `imageio` provides efficient format conversions, especially when no image transformations are required.
+We transitioned from PIL to the `imageio` library. `imageio` provides efficient format conversions, especially when no image transformations are required.
 
 ### Directory Creation Optimization
-- Instead of repetitively checking and potentially creating a directory for every image, we maintain a set of directories that have already been created. This reduces redundant filesystem interactions.
+Instead of repetitively checking and potentially creating a directory for every image, we maintain a set of directories that have already been created. This reduces redundant filesystem interactions.
 
 ### Multithreading with `ThreadPoolExecutor`
-- Python's built-in `concurrent.futures.ThreadPoolExecutor` is employed to process multiple images concurrently, leveraging multiple CPU threads. Such a parallel processing mechanism is ideal for I/O-bound tasks. When one thread is waiting for I/O tasks to conclude, other threads can continue their processing tasks.
+Python's built-in `concurrent.futures.ThreadPoolExecutor` is employed to process multiple images concurrently, leveraging multiple CPU threads. Such a parallel processing mechanism is ideal for I/O-bound tasks. When one thread is waiting for I/O tasks to conclude, other threads can continue their processing tasks.
 
 ### Multiprocessing with `ProcessPoolExecutor`
-- An alternative to threading, the code is also designed to use Python's `ProcessPoolExecutor` for parallel processing. This allows for distribution of work among multiple CPU cores. Though this approach can be more suitable for CPU-intensive tasks, it generally has a higher overhead compared to threading. Therefore, the choice between threading and multiprocessing will depend on specific workload and environmental parameters.
+An alternative to threading, the code is also designed to use Python's `ProcessPoolExecutor` for parallel processing. This allows for distribution of work among multiple CPU cores. Though this approach can be more suitable for CPU-intensive tasks, it generally has a higher overhead compared to threading. Therefore, the choice between threading and multiprocessing will depend on specific workload and environmental parameters.
 
