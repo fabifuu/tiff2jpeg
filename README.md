@@ -37,9 +37,6 @@ cancer_treated_2023.08.08/
 ## Overview
 This code performs image format conversion, changing `.TIFF` files to `.JPEG`, and is optimized for speed using several techniques:
 
-### Image File Handling with `imageio`
-We transitioned from PIL to the `imageio` library. `imageio` provides efficient format conversions, especially when no image transformations are required.
-
 ### Directory Creation Optimization
 Instead of repetitively checking and potentially creating a directory for every image, we maintain a set of directories that have already been created. This reduces redundant filesystem interactions.
 
