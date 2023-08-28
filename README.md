@@ -1,5 +1,5 @@
 # tiff2jpeg
-`tiff2jpeg` is fast batch `tiff` to `jpeg` converter that preserve the folder structure. It purposefully designed to convert hundred of thousand `tiff` images with intricate folder structure, usually comes from microscope raw data such as Mica (Leica), Cell-IQ (Yokogawa), Incucyte (Sartorius), and other microscope system! The script utilize multithreading and other optimization
+`tiff2jpeg` is fast batch `tiff` to `jpeg` converter that preserve the folder structure. It purposefully designed to convert hundred of thousand `tiff` images with intricate folder structure, usually comes from microscope raw data such as Mica (Leica), Cell-IQ (Yokogawa), Incucyte (Sartorius), and other microscope system! The script utilize multithreading and other optimization, and can run with >200 iteration/second.
 
 # Use case scenario
 ## Problem that we usually face
