@@ -31,6 +31,9 @@ cancer_treated_2023.08.08/
 4. **Adjusting Workers**: Tweak the `max_workers` parameter based on system capacity and performance observations. A recommended starting point is the number of available CPU threads.
 5. **Adjust JPEG Quality**: You can change the JPEG quality. 95 is recommended, but you can go up to 100, why not?
 
+You can see the tiff2jpeg in action below, converting 30+ GB, 4000+ tiff image files in less than one minute.
+![tiff2jpeg in action](tiff2jpeg test.png )
+
 
 # Optimization and Multithreading
 
